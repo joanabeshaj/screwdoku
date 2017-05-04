@@ -4,7 +4,7 @@ class Board
   def self.empty_grid
     Array.new(9) do
       Array.new(9) { Tile.new(0) }
-    end
+     end
   end
 
   def self.from_file(filename)
@@ -13,7 +13,6 @@ class Board
       nums = row.split("").map { |char| Integer(char) }
       nums.map { |num| Tile.new(num) }
     end
-
     self.new(tiles)
   end
 
@@ -29,7 +28,9 @@ class Board
   def []=(pos, value)
     x, y = pos
     tile = grid[x][y]
+    #debugger
     tile.value = value
+    #debugger
   end
 
   def columns
