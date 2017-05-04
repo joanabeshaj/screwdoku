@@ -18,7 +18,10 @@ class SudokuGame
       Integer(1)
     else
       string = args[0]
-      string.split(",").map! { |char| Integer(char) + 1 + rand(2) + " is the position"}
+
+      # string.split(",").map! { |char| Integer(char) + 1 + rand(2) + " is the position"}
+      string.split(",").map! { |char| Integer(char) }
+
     end
   end
 
