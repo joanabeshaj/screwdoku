@@ -57,9 +57,6 @@ class SudokuGame
     board[pos] = val
   end
 
-  def nothib
-  end
-
   def run
     play_turn until solved?
     board.render
