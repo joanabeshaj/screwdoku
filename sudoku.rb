@@ -15,7 +15,7 @@ class SudokuGame
 
   def method_missing(method_name, *args)
     if method_name =~ /val/
-      Integer(1)
+      Integer(args[0])
     else
       string = args[0]
 
